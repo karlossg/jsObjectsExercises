@@ -6,12 +6,11 @@ function Button(text) {
 
 Button.prototype = {
   create: function() {
-    const self = this;
     this.element = document.createElement('button');
     this.body = document.createTextNode(this.text);
     this.element.appendChild(this.body);
     this.element.onclick = () => {
-      alert(self.text);
+      alert(this.text);
     }
     document.body.appendChild(this.element);
 	}
